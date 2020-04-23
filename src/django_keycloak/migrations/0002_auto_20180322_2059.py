@@ -12,21 +12,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='OpenIdConnectProfile',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True,
-                                        serialize=False, verbose_name='ID')),
-                ('access_token', models.TextField(null=True)),
-                ('expires_before', models.DateTimeField(null=True)),
-                ('refresh_token', models.TextField(null=True)),
-                ('refresh_expires_before', models.DateTimeField(null=True)),
-                ('sub', models.CharField(max_length=255, unique=True)),
-            ],
-            options={
-                'abstract': False,
-            },
-        ),
-        migrations.CreateModel(
             name='ExchangedToken',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True,
